@@ -7,14 +7,14 @@ bool dfs(char** board, int i, int j, int m, int n, char* word, int index) {
         return false;
 
     char c = board[i][j];
-    board[i][j] = 0;  
+    board[i][j] = 0;
 
     bool found = dfs(board, i + 1, j, m, n, word, index + 1) ||
                  dfs(board, i - 1, j, m, n, word, index + 1) ||
                  dfs(board, i, j + 1, m, n, word, index + 1) ||
                  dfs(board, i, j - 1, m, n, word, index + 1);
 
-    board[i][j] = c;  
+    board[i][j] = c;
     return found;
 }
 
