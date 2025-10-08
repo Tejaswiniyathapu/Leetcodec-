@@ -7,21 +7,21 @@ class Solution(object):
         """
         m, n = len(board), len(board[0])
         
-        def dfs(i, j, index):
-            if index == len(word):
+        def dfs(i, j, k):
+            if k == len(word):
                 return True
-            if i < 0 or i >= m or j < 0 or j >= n or board[i][j] != word[index]:
+            if i < 0 or i >= m or j < 0 or j >= n or board[i][j] != word[k]:
                 return False
             
-            temp = board[i][j]
-            board[i][j] = '#' 
+            tmp = board[i][j]
+            board[i][j] = '#'  # mark as visited
             
-            found = (dfs(i + 1, j, index + 1) or
-                     dfs(i - 1, j, index + 1) or
-                     dfs(i, j + 1, index + 1) or
-                     dfs(i, j - 1, index + 1))
+            found = (dfs(i+1, j, k+1) or
+                     dfs(i-1, j, k+1) or
+                     dfs(i, j+1, k+1) or
+                     dfs(i, j-1, k+1))
             
-            board[i][j] = temp  
+            board[i][j] = tmp  # backtrack
             return found
         
         for i in range(m):
@@ -29,3 +29,4 @@ class Solution(object):
                 if dfs(i, j, 0):
                     return True
         return False
+        
