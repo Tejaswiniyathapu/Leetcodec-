@@ -14,14 +14,14 @@ class Solution(object):
                 return False
             
             temp = board[i][j]
-            board[i][j] = '#'  # mark as visited
+            board[i][j] = '#' 
             
             found = (dfs(i + 1, j, index + 1) or
                      dfs(i - 1, j, index + 1) or
                      dfs(i, j + 1, index + 1) or
                      dfs(i, j - 1, index + 1))
             
-            board[i][j] = temp  # backtrack
+            board[i][j] = temp  
             return found
         
         for i in range(m):
