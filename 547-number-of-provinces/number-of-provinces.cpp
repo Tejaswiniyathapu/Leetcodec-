@@ -8,8 +8,7 @@ private:
             }
         }
     }
-
-public:
+    public:
     int findCircleNum(vector<vector<int>>& isConnected) {
         int n = isConnected.size();
         vector<bool> visited(n, false);
@@ -21,7 +20,6 @@ public:
                 provinces++;
             }
         }
-
-        return provinces;
+         return provinces;
     }
 };
