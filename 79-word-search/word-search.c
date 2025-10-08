@@ -4,14 +4,14 @@ bool dfs(char** board, int i, int j, int m, int n, char* word, int index) {
         return false;
 
     char temp = board[i][j];
-    board[i][j] = '#'; // mark visited
+    board[i][j] = '#';
 
     bool found = dfs(board, i + 1, j, m, n, word, index + 1) ||
                  dfs(board, i - 1, j, m, n, word, index + 1) ||
                  dfs(board, i, j + 1, m, n, word, index + 1) ||
                  dfs(board, i, j - 1, m, n, word, index + 1);
 
-    board[i][j] = temp; // backtrack
+    board[i][j] = temp;
     return found;
 }
 
