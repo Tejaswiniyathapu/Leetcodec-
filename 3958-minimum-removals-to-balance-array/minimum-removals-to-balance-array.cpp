@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minRemoval(vector<int>& nums, int k) {
-       
+     
         int n = nums.size();
         sort(nums.begin(), nums.end());
 
@@ -14,6 +14,6 @@ public:
             ans = min(ans, n - (right - left));
         }
 
-        return ans; 
+        return ans;   
     }
 };
