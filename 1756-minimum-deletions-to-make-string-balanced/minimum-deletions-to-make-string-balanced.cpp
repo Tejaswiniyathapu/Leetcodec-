@@ -1,7 +1,7 @@
 class Solution {
 public:
     int minimumDeletions(string s) {
-      int bCount = 0;
+       int bCount = 0;
         int deletions = 0;
 
         for (char c : s) {
@@ -12,6 +12,6 @@ public:
             }
         }
         return deletions;
-      
+     
     }
 };
