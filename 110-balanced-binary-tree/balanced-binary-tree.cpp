@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-   int dfs(TreeNode* root){
+int dfs(TreeNode* root){
         if(root == NULL) return 0;
         
         int leftheight = dfs(root->left);
