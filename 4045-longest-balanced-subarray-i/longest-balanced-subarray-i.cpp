@@ -1,7 +1,7 @@
 class Solution {
 public:
     int longestBalanced(vector<int>& nums) {
-       size_t len = 0;
+     size_t len = 0;
 
         for (size_t i = 0; i < nums.size(); i++) {
             auto odd = unordered_map<int, int>();
@@ -17,6 +17,6 @@ public:
             }
         }
 
-        return int(len); 
+        return int(len);   
     }
 };
