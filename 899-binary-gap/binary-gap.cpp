@@ -1,7 +1,7 @@
 class Solution {
 public:
     int binaryGap(int n) {
-      int last = -1;
+         int last = -1;
         int maxDist = 0;
         int pos = 0;
 
@@ -16,6 +16,6 @@ public:
             pos++;
         }
 
-        return maxDist;   
+        return maxDist;
     }
 };
